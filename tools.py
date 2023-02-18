@@ -89,7 +89,7 @@ def AddInMatrPoly(q,N,M1,M2):
 #M in Tq[X] / (X^N+1)
 #K in Z/pZ[X]
 def MultExtMatrPoly(q,N,K,M):
-    return [[[MultExtTore(q,K[k],M[i][j]) for k in range(N)] for j in range(len(M[0]))] for i in range(len(M))]
+    return [[MultPolyExt(q,N,K,M[i][j]) for j in range(len(M[0]))] for i in range(len(M))]
 
 
 #Multiplication de deux matrices
