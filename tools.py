@@ -76,8 +76,6 @@ def MultPolyExt(q,N,P1,P2) :
             P[i+j] = AddInTore(q,P[i+j],tmp)
     for i in range(N) :
         P[i] = AddInTore(q,P[i],-P[i+N])
-        if P[i]==0 :
-            P[i]=1
     return P[:N]
 
 # Addition de deux matrices de polynômes de Tq[X] / (X^N+1)
